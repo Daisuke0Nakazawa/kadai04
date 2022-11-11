@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/batting.css">
+</head>
+<body>
+</head>
+ <div class="wrapper">
+    <header>
+        <h1></h1>
+    </header>
+
+    <main>
+        <div class="todayresult">
+          <p>↓今日の結果を選択↓</p>
+        </div>
+        <div class="score">
+            <label for="" class="date-edhit">
+                <input type="date" name="" id="date" class="date">
+            </label>
+            <select name="how" id="enemy">
+                <option value="">相手チームを選択</option>
+                <option value="ヤンキース">ヤンキース</option>
+                <option value="レッドソックス">レッドソックス</option>
+                <option value="レイズ">レイズ</option>
+                <option value="オリオールズ">オリオールズ</option>
+                <option value="ブルージェイズ">ブルージェイズ</option>
+                <option value="ガーディアンズ">ガーディアンズ</option>
+                <option value="ツインズ">ツインズ</option>
+                <option value="タイガース">タイガース</option>
+                <option value="ロイヤルズ">ロイヤルズ</option>
+                <option value="ホワイトソックス">ホワイトソックス</option>
+                <option value="アストロズ">アストロズ</option>
+                <option value="アスレチクス">アスレチックス</option>
+                <option value="レンジャース">レンジャース</option>
+                <option value="マリナーズ">マリナーズ</option>
+                <option value="マーリンズ">マーリンズ</option>
+                <option value="メッツ">メッツ</option>
+                <option value="ブレーブス">ブレーブス</option>
+                <option value="ナショナルズ">ナショナルズ</option>
+                <option value="レッズ">レッズ</option>
+                <option value="カブス">カブス</option>
+                <option value="ブルワーズ">ブルワーズ</option>
+                <option value="フィリーズ">フィリーズ</option>
+                <option value="ロッキーズ">ロッキーズ</option>
+                <option value="ダイヤモンドバックス">ダイヤモンドバックス</option>
+                <option value="ドジャース">ドジャース</option>
+                <option value="パドレス">パドレス</option>
+                <option value="ジャイアンツ">ジャイアンツ</option>
+                <option value="カージナルス">カージナルス</option>
+                <option value="パイレーツ">パイレーツ</option>
+            </select>
+            <select name="" id="result">
+                <option value="">打撃結果を選ぶ</option>
+                <option value="ホームラン">ホームラン</option>
+                <option value="二塁打">二塁打</option>
+                <option value="三塁打">三塁打</option>
+                <option value="ヒット">ヒット</option>
+                <option value="三振">三振</option>
+                <option value="四球">四球</option>
+                <option value="ゴロ">ゴロ</option>
+                <option value="フライ">フライ</option>
+                <option value="犠飛">犠飛</option>
+                <option value="犠打">犠打</option>
+                <option value="ライナー">ライナー</option>
+            </select>
+            <select name="" id="rbiresult">
+                <option value="0">打点があれば内容を選択</option>
+                <option value="1">ソロホームラン</option>
+                <option value="2">2ランホームラン</option>
+                <option value="3">3ランホームラン</option>
+                <option value="4">満塁ホームラン</option>
+                <option value="1">タイムリーヒット</option>
+                <option value="2">2点タイムリー</option>
+                <option value="3">3点タイムリー</option>
+                <option value="1">押し出し四球</option>
+                <option value="1">内野ゴロの間に1点</option>
+                <option value="1">スクイズ</option>
+
+            </select>
+            
+            <div class="enterbox">
+              <input type="button" value="更新" id="enter" class="enter">
+            </div>
+
+            <div class="atbat">
+                <input type="text" name="打数" id="atbat">
+                <p>打数</p>
+            </div>
+            <div class="hit">
+                <input type="text" name="安打" id="hit">
+                <p>安打</p>
+            </div>
+            <div class="rbi">
+                <input type="text" name="打点" id="rbi">
+                <p>打点</p>
+            </div>
+            <div class="homerun">
+                <input type="text" name="本塁打" id="homerun">
+                <p>本塁打</p>
+            </div>
+            <input type="text" id="key">      
+        </div>
+
+        <textarea id="memo"></textarea>
+        <ul>
+            <li id="save">s</li>
+            <li id="next">次の試合へ</li>
+            <li id="clear">Clear</li>
+        </ul>
+    </main>
+    <table id="list">
+    <!-- ここに追加データが挿入される -->
+    </table>
+    
+  
+    <footer><small>↓通算成績↓</small></footer>
+
+    <div class="totalresult">
+        <table>
+            <th id="">通算</th>
+            <td id="totalatbat">0打数</td>
+            <td id="totalhit">0安打</td>
+            
+
+        </table>
+
+        <table>
+            <th>打率</th>
+            <td id="average">.000</td>
+        </table>
+    
+
+        <TABLE>
+            <th >本塁打</th>
+            <td id="totalhomerun">0本塁打</td>
+        </TABLE>
+        
+        <table>
+            <th >打点</th>
+        <td id="totalrbi">0打点</td>
+        </table>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/batting.js"></script>
+
+</div>
+
+</body>
+</html>

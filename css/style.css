@@ -1,0 +1,24 @@
+body{
+    background-color: red;
+    width : 100%;
+}
+
+.wrapper{
+    background-color : white;
+    width : 80%;
+    margin : 0 auto ;
+}
+
+h1{
+    text-align: center;
+}
+
+.profile{
+    text-align: center;
+    height: 50px;
+}
+
+a{
+    text-decoration: none;
+  
+}
